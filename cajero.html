@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Creación de objetos</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div>
+                <h1 class="text-center">Cajero</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12">
+                <form action="javascript:void(0)" name="frmbook" id="frmbook" class="col s12">
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="bi bi-upc-scan"></i></div>
+                        </div>
+                        <input type="text" placeholder="Ingrese el nombre del producto" name="txtNombreProducto" class="form-control" id="nombreProducto" required maxlength="60" />
+                    </div>
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="bi bi-cash"></i></div>
+                        </div>
+                        <input type="number" step="0.01" placeholder="Ingrese el precio unitario" class="form-control" name="txtPrecioUnitario" id="precioUnitario" required />
+                    </div>
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="bi bi-basket"></i></div>
+                        </div>
+                        <input type="number" placeholder="Ingrese la cantidad" class="form-control" name="txtCantidad" id="cantidad" required />
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" name="mostrar" id="mostrar" class="btn btn-success w-25 col-md-12">Agregar a la Venta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <hr>
+            <h1 class="text-center">Detalle de la Venta</h1>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody id="infoVenta">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="Cajero.js"></script>
+
+</html>
